@@ -25,7 +25,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Запуск тестов
-        run: pytest -v
+        run: |
+          export PYTHONPATH=./
+          pytest -v
 
       - name: Обновление документации
         run: |
