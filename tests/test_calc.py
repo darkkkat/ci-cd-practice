@@ -1,4 +1,4 @@
-from src.calc import add, mul
+from src.calc import add, mul, sub
 
 def test_add():
     assert add(2, 3) == 5
