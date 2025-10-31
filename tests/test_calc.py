@@ -5,3 +5,6 @@ def test_add():
 
 def test_mul():
     assert mul(4, 5) == 20
+
+def test_sub():
+    assert sub(10, 3) == 7
