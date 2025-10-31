@@ -33,3 +33,11 @@ jobs:
         run: |
           echo "CI успешно выполнен: $(date)" >> docs/README.md
           echo "" >> docs/README.md
+
+      - name: Commit обновлённой документации обратно в репозиторий
+        run: |
+          git config user.name "ci-bot"
+          git config user.email "ci-bot@example.com"
+          git add docs/README.md
+          git commit -m "docs: автообновление README.md через CI" || echo "Нечего коммитить"
+          git push origin ${{ github.ref }}
